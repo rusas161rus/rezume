@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/pdfmake@0.3.11/build/pdfmake.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/pdfmake@0.3.11/build/vfs_fonts.js" defer></script>
+    <script src="resume.js" defer></script>
+</head>
+
+<body>
+    <header class="resume-header">
+        <nav aria-label="Language">
+            <span>Русский</span>
+            <a href="en/index.html">English</a>
+        </nav>
+        <div class="profile">
+            <div class="profile-text">
+                <h1>Будников Руслан Автандилович</h1>
+                <p class="role">DevOps Engineer</p>
+            </div>
+            <img
+                class="profile-photo"
+                src="images/photo.jpg"
+                alt="Руслан Будников"
+                width="140"
+                height="170"
+            >            
+        </div>
+
+        <button type="button" id="download-pdf">
+            Cкачать PDF
+        </button>       
+    </header>
+
+    <main>
+        <section class="general-section resume-section">
+            <h2>О себе</h2>
+            <p>Год рождения: 1991</p>
+            <p>
+                Системный администратор с опытом сопровождения 1С, Windows Server, Linux и баз данных.                
+            </p>
+            <p>
+                Специализируюсь на эксплуатации серверной инфраструктуры, диагностике инцидентов и автоматизации повторяющихся задач.
+            </p>
+        </section>
+
+        <section class="general-section experience-section">
+            <h2>Опыт работы</h2>
+
+            <article class="job">
+                <h3>Системный администратор - 1С-КСУ</h3>
+                
+                <p class="job-period">
+                    Сентябрь 2025 - Сентябрь 2026
+                </p>
+                
+                <ul>
+                    <li>Сопровождал серверную среду 1С:Предприятие 8.3: контролировал доступность серверов и разбирал инциденты в работе приложений и баз данных.</li>
+                    <li>Устанавливал поставки и обновления ПО в рамках сопровождения продуктов 1С.</li>
+                    <li>Диагностировал службы агентов 1С и процессы Windows Server; проверял удалённые узлы через PowerShell и сопоставлял процессы со службами.</li>
+                    <li>Анализировал сеансы и фоновые задания 1С, нагрузку на Microsoft SQL Server, tempdb и журналы; оценивал последствия завершения сеансов.</li>
+                    <li>Исследовал ошибки веб-публикаций 1С: проверял доступность ресурсов и конфигурацию Internet Information Services (IIS).</li>
+                    <li>Обслуживал парк из примерно 250 кластеров виртуальных машин (в каждом кластере от 3 до 5 нод) на позиции дежурного администратора</li>
+                    <li>Реагировал и исправлял инциденты поступающие в систему мониторинга zabbix</li>
+                </ul>
+            </article>
+
+            <article class="job">
+                <h3>IT Специалист сопровождения РЦ - ООО "ИТМ"</h3>
+                
+                <p class="job-period">
+                    Май 2025 - Сентябрь 2025
+                </p>
+                
+                <ul>
+                    <li>Устанавливал фиксы и патчи в среде Oracle Database и Oracle Linux; выявлял ошибки и передавал результаты диагностики разработчикам.</li>
+                    <li>Анализировал SQL-сессии и планы запросов; выполнял операции с индексами по инструкциям команды разработки, используя SQL Developer и DBeaver.</li>
+                    <li>Сопровождал приложения Oracle WebLogic и управлял выполнением заданий через пульт джобов: запускал и останавливал задания по регламенту.</li>
+                    <li>Обновлял ПО терминалов сбора данных; проверял сеть с помощью ping, tracert, mtr и TCP-дампов для локализации сбоев подключения.</li>                    
+                </ul>
+            </article>
+
+            <article class="job">
+                <h3>Инженер технической поддержки - Яндекс Команда для бизнеса</h3>
+                
+                <p class="job-period">
+                    Апрель 2023 - Май 2025
+                </p>
+                
+                <ul>
+                    <li>Восстанавливал работу приложений и подключений пользователей на 3 семействах ОС: Windows, macOS и Linux; использовал TeamViewer и RustDesk.</li>
+                    <li>Локализовал сетевые и звуковые сбои с помощью WinMTR и DevTools; настраивал сертификаты, политики WebRTC, Oktell, VPN и Proxifier.</li>
+                    <li>Предоставлял доступ к дискам через Active Directory; создавал учётные записи и назначал лицензии Google Workspace, Zoom и Figma.</li>
+                    <li>Подготовил инструкции для пользователей и поддержки; обрабатывал обращения в Яндекс Трекере и передавал сложные инциденты следующей линии.</li>        
+                </ul>
+            </article>
+
+            <article class="job">
+                <h3>Инженер технической поддержки - DATUM soft</h3>
+                
+                <p class="job-period">
+                    Август 2022 - Январь 2023
+                </p>
+                
+                <ul>
+                    <li>Диагностировал неисправности геоинформационного ПО, обрабатывал обращения в Jira и устанавливал обновления.</li>
+                    <li>Подготовил растровые карты в QGIS для загрузки на геосервер: преобразовал системы координат и форматы, объединил фрагменты изображений.</li>
+                    <li>Создал XML-стили и настроил отображение карт на геосервере; обучал пользователей работе с ГИСОГД и QGIS.</li>
+                    <li>    Сформировал выборки данных с помощью SQL и настроил репликацию PostgreSQL.</li>        
+                </ul>
+            </article>
+        </section>
+
+        <section class="general-section projects-section">
+            <h2>Мои проекты</h2>
+            <p>
+                Развиваю собственный инфраструктурный стенд и прикладные проекты:
+            </p>
+
+            <ul>
+                <li>
+                    Развернул стенд Proxmox VE с виртуальными машинами Linux/Windows и сервисами Docker Compose. Настроил единый вход через Authentik/OIDC для 9 приложений: Nextcloud, Mailcow, Outline, Grafana, Matrix, AFFiNE, Remnawave, Vaultwarden и собственного сервиса на базе KasmVNC.
+                </li>
+                <li>
+                    Настроил Nextcloud с ONLYOFFICE, Whiteboard и Talk, включая coturn для STUN/TURN. Подключил Ollama к Nextcloud Assistant и настроил обработку фоновых ИИ-задач.            
+                </li>
+                <li>
+                    Настроил VPN-инфраструктуру Remnawave/Xray и мониторинг трафика на Grafana/VictoriaMetrics. Разработал Python-экспортёр и Telegram-бота для анализа нагрузки по узлам, IP и портам и сопоставления подключений с пользователями. Перенёс Grafana с SQLite на PostgreSQL с сохранением учётных записей SSO.
+                </li>
+                <li>
+                    Разработал с использованием Codex собственное веб-приложение для управления контейнерными рабочими средами по типу Kasm Workspaces. Использовал KasmVNC для доступа к приложениям Linux через браузер. Реализовал каталог приложений, управление сессиями, постоянные профили пользователей, Authentik/OIDC и сетевую изоляцию через Xray. Стек: Python, FastAPI, PostgreSQL, Docker SDK.
+                </li>
+                <li>
+                    Так же разработал свою базу знаний в Outline, по установке, настройке и исправлении ошибок моих сервисов и базу знаний для работы в 1с-ксу
+                </li>
+            </ul>
+            <p>
+                Применяю ChatGPT, Codex и ИИ-агентов для подготовки и проверки кода, анализа логов и конфигураций. Готовлю технические инструкции, обучаю пользователей и передаю сложные инциденты разработчикам с результатами диагностики.
+            </p>
+            <p>
+                Дополнительно: 5 лет опыта монтажа СКС и настройки коммутаторов, маршрутизаторов и радиомостов.
+            </p>
+        </section> 
+        
+        <section class="general-section skills-section">
+            <h2>Мои навыки</h2>
+            <ul>
+                <li>Linux [Ubuntu, Debian, Oracle, Red Hat]</li>
+                <li>Windows, Windows Server, macOS</li>
+                <li>Proxmox, HyperV</li>
+                <li>Git, GitHub</li>
+                <li>Docker, Docker compose</li>
+                <li>Grafana [VictoriaMetrics], Zabbix</li>
+                <li>Authentik, SSO, OIDC</li>
+                <li>VPN [OpenVPN, WireGuard, XRAY, VLESS, REALITY]</li>
+                <li>html, XML</li>
+                <li>C++, Python</li>               
+                <li>PostgreSQL, MSSQL, Oracle Database [SQL Developer, DBeaver]</li>
+            </ul>
+        </section>
+
+        <section class="general-section contacts-section">
+            <h2>Контакты</h2>
+            <ul>
+                <li>
+                    Email:
+                    <a href="mailto:budnikov_ra@bastion-local.ru">budnikov_ra@bastion-local.ru</a>
+                </li>
+                <li>
+                    Telegram
+                    <a href="https://t.me/Rsas161rus">@Rsas161rus</a>
+                </li>
+                <li>
+                    GitHub
+                    <a href="https://github.com/rusas161rus">rusas161rus</a>
+                </li>
+            </ul>
+        </section>       
+    </main>
+</body>
+</html>

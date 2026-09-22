@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.jsdelivr.net/npm/pdfmake@0.3.11/build/pdfmake.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/pdfmake@0.3.11/build/vfs_fonts.js" defer></script>
+    <script src="../resume.js" defer></script>
+</head>
+
+<body>
+    <header class="resume-header">
+        <nav aria-label="Language">
+            <span>English</span>
+            <a href="../index.html">Русский</a>
+        </nav>
+        <div class="profile">
+            <div class="profile-text">
+                <h1>Budnikov Ruslan Avtandilovich</h1>
+                <p class="role">DevOps Engineer</p>
+            </div>
+            <img
+                class="profile-photo"
+                src="../images/photo.jpg"
+                alt="Ruslan Budnikov"
+                width="140"
+                height="170"
+            >            
+        </div>        
+
+        <button type="button" id="download-pdf">
+            Download PDF
+        </button>                       
+    </header>
+
+    <main>
+        <section class="general-section resume-section">
+            <h2>About me</h2>
+            <p>Year of birth: 1991</p>
+            <p>
+                System administrator with experience in maintaining 1C, Windows Server, Linux and databases.
+            </p>
+            <p>
+                I specialize in operating server infrastructure, incident diagnostics and automation of repetitive tasks.
+            </p>
+        </section>
+
+                <section class="general-section experience-section">
+            <h2>Work Experience</h2>
+
+            <article class="job">
+                <h3>System Administrator - 1C-KSU</h3>
+                
+                <p class="job-period">
+                    September 2025 - September 2026
+                </p>
+                
+                <ul>
+                    <li>Supported the server environment of 1C:Enterprise 8.3: controlled server availability and resolved incidents in application and database operations.</li>
+                    <li>Installed updates and patches for 1C products within the support framework.</li>
+                    <li>Diagnosed 1C agent services and Windows Server processes; verified remote nodes through PowerShell and matched processes with services.</li>
+                    <li>Analyzed 1C sessions and background tasks, SQL Server load, tempdb and logs; evaluated consequences of session terminations.</li>
+                    <li>Investigated errors in 1C web publications: checked resource availability and Internet Information Services (IIS) configuration.</li>
+                    <li>Served a fleet of approximately 250 virtual machine clusters (with 3 to 5 nodes in each cluster) as the on-call administrator</li>
+                    <li>Responded to and resolved incidents arriving in the zabbix monitoring system</li>
+                </ul>
+            </article>
+
+            <article class="job">
+                <h3>IT Specialist - ООО "ИТМ"</h3>
+                
+                <p class="job-period">
+                    May 2025 - September 2025
+                </p>
+                
+                <ul>
+                    <li>Installed fixes and patches in the Oracle Database and Oracle Linux environment; identified errors and forwarded diagnostic results to developers.</li>
+                    <li>Analyzed SQL sessions and query plans; performed index operations according to development team instructions, using SQL Developer and DBeaver.</li>
+                    <li>Supported Oracle WebLogic applications and managed job execution through the job console: initiated and terminated jobs according to schedule.</li>
+                    <li>Updated data collection terminal software; tested network connectivity using ping, tracert, mtr and TCP dumps for troubleshooting connection issues.</li>                    
+                </ul>
+            </article>
+
+            <article class="job">
+                <h3>IT Specialist - Яндекс Команда для бизнеса</h3>
+                
+                <p class="job-period">
+                    April 2023 - May 2025
+                </p>
+                
+                <ul>
+                    <li>Restored application and user connection functionality on 3 OS families: Windows, macOS and Linux; used TeamViewer and RustDesk.</li>
+                    <li>Localized network and audio failures using WinMTR and DevTools; configured certificates, WebRTC policies, Oktell, VPN and Proxifier.</li>
+                    <li>Provided access to drives through Active Directory; created user accounts and assigned licenses for Google Workspace, Zoom and Figma.</li>
+                    <li>Prepared instructions for users and support; processed requests in Yandex Tracker and forwarded complex incidents to the next line.</li>        
+                </ul>
+            </article>
+
+            <article class="job">
+                <h3>IT Specialist - DATUM soft</h3>
+                
+                <p class="job-period">
+                    August 2022 - January 2023
+                </p>
+                
+                <ul>
+                    <li>Diagnosed issues with geospatial software, processed requests in Jira and installed updates.</li>
+                    <li>Prepared raster maps in QGIS for upload to the geoserver: transformed coordinate systems and formats, merged image fragments.</li>
+                    <li>Created XML styles and configured map display on the geoserver; trained users on working with GISO GD and QGIS.</li>
+                    <li>    Formed data subsets using SQL and configured PostgreSQL replication.</li>        
+                </ul>
+            </article>
+        </section>
+
+        <section class="general-section projects-section">
+            <h2>My Projects</h2>
+            <p>
+                I am developing my own infrastructure stand and application projects:
+            </p>
+
+            <ul>
+                <li>
+                    Deployed a Proxmox VE stand with Linux/Windows virtual machines and Docker Compose services. Configured single sign-on via Authentik/OIDC for 9 applications: Nextcloud, Mailcow, Outline, Grafana, Matrix, AFFiNE, Remnawave, Vaultwarden and my own service based on KasmVNC.
+                </li>
+                <li>
+                    Configured Nextcloud with ONLYOFFICE, Whiteboard and Talk, including coturn for STUN/TURN. Connected Ollama to Nextcloud Assistant and configured processing of background AI tasks.            
+                </li>
+                <li>
+                    Configured the Remnawave/Xray VPN infrastructure and traffic monitoring on Grafana/VictoriaMetrics. Developed a Python exporter and a Telegram bot to analyze the load by node, IP and port and compare connections with users. Migrated Grafana from SQLite to PostgreSQL while maintaining SSO accounts.
+                </li>
+                <li>
+                    Using Codex, I developed my own web application for managing container workspaces like Kasm Workspaces. Used KasmVNC to access Linux applications via browser. Implemented Application Catalog, Session Management, Persistent User Profiles, Authentik/OIDC and Network Isolation via Xray. Stack: Python, FastAPI, PostgreSQL, Docker SDK.
+                </li>
+                <li>
+                    I also developed my own knowledge base in Outline for installing, configuring and correcting errors of my services and a knowledge base for working in 1c-ksu
+                </li>
+            </ul>
+            <p>
+                I use ChatGPT, Codex and AI agents to prepare and check code, analyze logs and configurations. I prepare technical instructions, train users and transfer complex incidents to developers with diagnostic results.
+            </p>
+            <p>
+                Additionally: 5 years of experience in installing SCS and configuring switches, routers and radio bridges.
+            </p>
+        </section> 
+        
+        <section class="general-section skills-section">
+            <h2>My Skills</h2>
+            <ul>
+                <li>Linux [Ubuntu, Debian, Oracle, Red Hat]</li>
+                <li>Windows, Windows Server, macOS</li>
+                <li>Proxmox, HyperV</li>
+                <li>Git, GitHub</li>
+                <li>Docker, Docker compose</li>
+                <li>Grafana [VictoriaMetrics], Zabbix</li>
+                <li>Authentik, SSO, OIDC</li>
+                <li>VPN [OpenVPN, WireGuard, XRAY, VLESS, REALITY]</li>
+                <li>html, XML</li>
+                <li>C++, Python</li>               
+                <li>PostgreSQL, MSSQL, Oracle Database [SQL Developer, DBeaver]</li>
+            </ul>
+        </section>
+
+        <section class="general-section contacts-section">
+            <h2>Contacts</h2>
+            <ul>
+                <li>
+                    Email:
+                    <a href="mailto:budnikov_ra@bastion-local.ru">budnikov_ra@bastion-local.ru</a>
+                </li>
+                <li>
+                    Telegram
+                    <a href="https://t.me/Rsas161rus">@Rsas161rus</a>
+                </li>
+                <li>
+                    GitHub
+                    <a href="https://github.com/rusas161rus">rusas161rus</a>
+                </li>
+            </ul>
+        </section>       
+    </main>
+</body>
+</html>
