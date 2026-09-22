@@ -1,10 +1,10 @@
 services:
   rezume:
-    image: nginx.stable-alpine
+    image: nginx:stable-alpine
     container_name: resume-web
     network_mode: host
     restart: unless-stopped
 
-    volumes:      
+    volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
-      - ./srv/resume:/var/www/resume:ro
+      - ./site:/var/www/resume:ro
